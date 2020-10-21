@@ -1,0 +1,8 @@
+srv=net.createServer(net.TCP) 
+srv:listen(80,function(conn) 
+    conn:on("receive",function(conn,payload) 
+    print("R:"..payload) 
+    conn:send("<h1> Hello, NodeMcu.</h1> <p>GPIO0 <a href=\"in=ON1\">123</a></p>")
+    --conn:send("<h1> Hello, NodeMcu.</h1>")
+    end) 
+end)

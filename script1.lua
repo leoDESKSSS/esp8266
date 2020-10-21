@@ -1,0 +1,1 @@
+gpio.mode(4,gpio.OUTPUT)
